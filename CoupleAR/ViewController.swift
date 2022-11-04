@@ -30,6 +30,25 @@ class ViewController: UIViewController {
             let metalMaterial = SimpleMaterial(color: .gray, isMetallic: true)
             // create model
             let model = ModelEntity(mesh: box, materials: [metalMaterial])
+            
+            // the ability to press on the models
+            model.generateCollisionShapes(recursive: true)
+            
+            // cards array append model
+            cards.append(model)
+            
+        }
+        // for loop to position the cards in an index or sequence of pairs
+        for (index, card) in cards.enumerated() {
+                // create an x coordinates
+                let x = Float(index % 2)
+                let z = Float(index / 2)
+            
+            // position the cards
+            card.position = [x*0.1, 0, z*0.1]
+            // add child to anchor
+            anchor.addChild(card)
+                
         }
     }
 }
