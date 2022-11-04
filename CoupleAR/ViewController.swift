@@ -7,6 +7,7 @@
 
 import UIKit
 import RealityKit
+import Combine
 
 class ViewController: UIViewController {
     
@@ -48,8 +49,14 @@ class ViewController: UIViewController {
             card.position = [x*0.1, 0, z*0.1]
             // add child to anchor
             anchor.addChild(card)
-                
         }
+        // insured deaccolation until needed 
+        var cancellable: AnyCancellable? = nil
+        
+        
+        // load models
+        ModelEntity.loadModelAsync(named: "toy_biplane")
+        
     }
     
     @IBAction func onTap(_ sender: UITapGestureRecognizer) {

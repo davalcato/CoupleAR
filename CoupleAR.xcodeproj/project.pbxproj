@@ -12,6 +12,12 @@
 		75178E08291486E700D4954F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75178E06291486E700D4954F /* Main.storyboard */; };
 		75178E0A291486EA00D4954F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75178E09291486EA00D4954F /* Assets.xcassets */; };
 		75178E0D291486EA00D4954F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75178E0B291486EA00D4954F /* LaunchScreen.storyboard */; };
+		752AC11C291598BB009DFDB6 /* CosmonautSuit_en.reality in Resources */ = {isa = PBXBuildFile; fileRef = 752AC116291598B1009DFDB6 /* CosmonautSuit_en.reality */; };
+		752AC11D291598BB009DFDB6 /* LunarRover_English.reality in Resources */ = {isa = PBXBuildFile; fileRef = 752AC117291598B3009DFDB6 /* LunarRover_English.reality */; };
+		752AC11E291598BB009DFDB6 /* PegasusTrail.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 752AC118291598B5009DFDB6 /* PegasusTrail.usdz */; };
+		752AC11F291598BB009DFDB6 /* toy_drummer.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 752AC119291598B6009DFDB6 /* toy_drummer.usdz */; };
+		752AC120291598BB009DFDB6 /* hab_en.reality in Resources */ = {isa = PBXBuildFile; fileRef = 752AC11A291598B9009DFDB6 /* hab_en.reality */; };
+		752AC121291598BB009DFDB6 /* toy_biplane.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 752AC11B291598BB009DFDB6 /* toy_biplane.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +27,12 @@
 		75178E07291486E700D4954F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75178E09291486EA00D4954F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75178E0C291486EA00D4954F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		752AC116291598B1009DFDB6 /* CosmonautSuit_en.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = CosmonautSuit_en.reality; sourceTree = "<group>"; };
+		752AC117291598B3009DFDB6 /* LunarRover_English.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = LunarRover_English.reality; sourceTree = "<group>"; };
+		752AC118291598B5009DFDB6 /* PegasusTrail.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = PegasusTrail.usdz; sourceTree = "<group>"; };
+		752AC119291598B6009DFDB6 /* toy_drummer.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_drummer.usdz; sourceTree = "<group>"; };
+		752AC11A291598B9009DFDB6 /* hab_en.reality */ = {isa = PBXFileReference; lastKnownFileType = file; path = hab_en.reality; sourceTree = "<group>"; };
+		752AC11B291598BB009DFDB6 /* toy_biplane.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = toy_biplane.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,12 @@
 				75178E00291486E700D4954F /* AppDelegate.swift */,
 				75178E02291486E700D4954F /* ViewController.swift */,
 				75178E06291486E700D4954F /* Main.storyboard */,
+				752AC116291598B1009DFDB6 /* CosmonautSuit_en.reality */,
+				752AC11A291598B9009DFDB6 /* hab_en.reality */,
+				752AC117291598B3009DFDB6 /* LunarRover_English.reality */,
+				752AC118291598B5009DFDB6 /* PegasusTrail.usdz */,
+				752AC11B291598BB009DFDB6 /* toy_biplane.usdz */,
+				752AC119291598B6009DFDB6 /* toy_drummer.usdz */,
 				75178E09291486EA00D4954F /* Assets.xcassets */,
 				75178E0B291486EA00D4954F /* LaunchScreen.storyboard */,
 			);
@@ -120,6 +138,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				752AC121291598BB009DFDB6 /* toy_biplane.usdz in Resources */,
+				752AC11C291598BB009DFDB6 /* CosmonautSuit_en.reality in Resources */,
+				752AC11E291598BB009DFDB6 /* PegasusTrail.usdz in Resources */,
+				752AC11F291598BB009DFDB6 /* toy_drummer.usdz in Resources */,
+				752AC120291598BB009DFDB6 /* hab_en.reality in Resources */,
+				752AC11D291598BB009DFDB6 /* LunarRover_English.reality in Resources */,
 				75178E0D291486EA00D4954F /* LaunchScreen.storyboard in Resources */,
 				75178E0A291486EA00D4954F /* Assets.xcassets in Resources */,
 				75178E08291486E700D4954F /* Main.storyboard in Resources */,
