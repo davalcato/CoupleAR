@@ -51,4 +51,13 @@ class ViewController: UIViewController {
                 
         }
     }
+    
+    @IBAction func onTap(_ sender: UITapGestureRecognizer) {
+        // location of tap
+        let tapLocation = sender.location(in: arView)
+        // arView function
+        arView.entity(at: tapLocation)
+        
+    }
+    
 }
