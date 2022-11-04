@@ -55,8 +55,32 @@ class ViewController: UIViewController {
     @IBAction func onTap(_ sender: UITapGestureRecognizer) {
         // location of tap
         let tapLocation = sender.location(in: arView)
-        // arView function
-        arView.entity(at: tapLocation)
+        // arView function / get back an entity
+        if let card = arView.entity(at: tapLocation) {
+            // if 80 degrees rotation then flip it down
+            if card.transform.rotation.angle == .pi {
+                var flipDownTransform = card.transform
+                flipDownTransform.rotation = simd_quatf(angle: 0, axis: [1, 0, 0])
+                card.move(
+                    to: flipDownTransform,
+                    relativeTo: card.parent,
+                    duration: 0.25,
+                    timingFunction: .easeInOut)
+                // in any other case no rotation for card yet
+            }else{
+                // 180 degree rotation create a flip
+                var flipUpTransform = card.transform
+                // change rotation
+                flipUpTransform.rotation = simd_quatf(angle: .pi, axis: [1, 0, 0])
+                card.move(
+                    to: flipUpTransform,
+                    relativeTo: card.parent,
+                    duration: 0.25,
+                    timingFunction: .easeInOut)
+                
+            }
+            
+        }
         
     }
     
