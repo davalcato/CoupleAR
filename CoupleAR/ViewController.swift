@@ -52,11 +52,27 @@ class ViewController: UIViewController {
         }
         // insured deaccolation until needed 
         var cancellable: AnyCancellable? = nil
-        
-        
         // load models
-        ModelEntity.loadModelAsync(named: "toy_biplane")
-        
+        cancellable = ModelEntity.loadModelAsync(named: "toy_biplane")
+        // load more modelEntities
+            .append(ModelEntity.loadModelAsync(named: "toy_drummer"))
+        // collect when the up stream finishes
+            .collect()
+        // give it its closure with the sink function
+                .sink(receiveCompletion: {error in
+                // print
+                print("Error: \(error)")
+                // then use
+                cancellable?.cancel()
+            }, receiveValue: { entities in
+                var objects: [ModelEntity] = []
+                // scale down all entities
+                for entity in entities {
+                    // call each entity
+                    entity.setScale(SIMD3<Float>(0.002, 0.002, 0.002), relativeTo: anchor)
+                    
+                }
+            })
     }
     
     @IBAction func onTap(_ sender: UITapGestureRecognizer) {
