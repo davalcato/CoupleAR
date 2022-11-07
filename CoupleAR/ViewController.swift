@@ -50,6 +50,17 @@ class ViewController: UIViewController {
             // add child to anchor
             anchor.addChild(card)
         }
+        // fix seeing the models below the cards
+        let boxSize: Float = 0.7
+        let occlusionBoxMesh = MeshResource.generateBox(size: boxSize)
+        // then apply occlusion material that hides everything
+        let occlusionBox = ModelEntity(mesh: occlusionBoxMesh, materials: [OcclusionMaterial()])
+        // position it correctly
+        occlusionBox.position.y = -boxSize/2
+        // then use anchor
+        anchor.addChild(occlusionBox)
+        
+        
         // insured deaccolation until needed 
         var cancellable: AnyCancellable? = nil
         // load models
@@ -84,8 +95,13 @@ class ViewController: UIViewController {
                 
                 // now place the elements onton the cards
                 for (index, object) in objects.enumerated() {
-                    
+                    // accessing each card with index and adding a child
+                    cards[index].addChild(object)
+                    // placing the model below the cards
+                    cards[index].transform.rotation = simd_quatf(angle: .pi, axis: [1, 0, 0])
                 }
+                // stop all side effects
+                cancellable?.cancel()
             })
     }
     
