@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         arView.scene.addAnchor(anchor)
         // define array of entities
         var cards: [Entity] = []
-        for _ in 1...4 {
+        for _ in 1...16 {
                 let box = MeshResource.generateBox(
                     width: 0.04,
                     height: 0.002,
@@ -42,8 +42,8 @@ class ViewController: UIViewController {
         // for loop to position the cards in an index or sequence of pairs
         for (index, card) in cards.enumerated() {
                 // create an x coordinates
-                let x = Float(index % 2)
-                let z = Float(index / 2)
+                let x = Float(index % 4)
+                let z = Float(index / 4)
             
             // position the cards
             card.position = [x*0.1, 0, z*0.1]
@@ -67,6 +67,7 @@ class ViewController: UIViewController {
         cancellable = ModelEntity.loadModelAsync(named: "toy_biplane")
         // load more modelEntities
             .append(ModelEntity.loadModelAsync(named: "toy_drummer"))
+            .append(ModelEntity.loadModelAsync(named: "toy_biplane"))
         // collect when the up stream finishes
             .collect()
         // give it its closure with the sink function
