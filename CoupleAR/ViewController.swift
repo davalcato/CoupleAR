@@ -70,6 +70,20 @@ class ViewController: UIViewController {
                 for entity in entities {
                     // call each entity
                     entity.setScale(SIMD3<Float>(0.002, 0.002, 0.002), relativeTo: anchor)
+                    // use entities to generate collision shapes
+                    entity.generateCollisionShapes(recursive: true)
+                    // now clone each entity
+                    for _ in 1...2 {
+                        // objects array
+                        objects.append(entity.clone(recursive: true))
+                        
+                    }
+                }
+                // now shuffle the objects
+                objects.shuffle()
+                
+                // now place the elements onton the cards
+                for (index, object) in objects.enumerated() {
                     
                 }
             })
